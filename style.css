@@ -1,0 +1,105 @@
+body {
+  background-image: url(https://wallpapercave.com/wp/wp2200979.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.form-intro,
+.form,
+h1 {
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  opacity: 0.9;
+  padding: 10px 20px 10px 20px;
+}
+
+/*I thought including this element might be useful for the rubric requirements.*/
+.form {
+  display: block !important;
+}
+
+.btn {
+  background-color: antiquewhite;
+  border: 1px solid black;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+/*This establishes that all 3 gallery images should be displayed in flex.
+Which I frankly dislike in this example (see the responsive design comment), but 
+I'm keeping it the way it is as a way to refer to the differences between the two*/
+
+#flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img1 {
+  position: absolute;
+  z-index: -1;
+  border: 1vh dotted black;
+}
+
+.img2 {
+  position: absolute;
+  z-index: 1;
+  border: 1vh solid black;
+}
+
+.img3 {
+  position: absolute;
+  z-index: 2;
+  border: 1vh dotted black;
+}
+
+/*This plays with responsive design. The form and heading change width and color 
+depending on the common device size dimensions that I found. Something I found after playing around is that 
+it's difficult to get flex images to change size with common responsive design 
+commands. I don't have a problem using grid. I'm choosing to keep it like this 
+so I can ask questions about the problem and get feedback.*/
+
+@media (max-width: 480px) {
+  .form-intro,
+  .form,
+  h1 {
+    background-color: aquamarine;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .form-intro,
+  .form,
+  h1 {
+    background-color: antiquewhite;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-intro,
+  .form,
+  h1 {
+    background-color: lightgray;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .form-intro,
+  .form,
+  h1 {
+    background-color: white;
+  }
+}
+
+@media (min-width: 1281px) {
+  .form-intro,
+  .form,
+  h1 {
+    background-color: salmon;
+  }
+}
